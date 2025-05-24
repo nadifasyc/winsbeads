@@ -2,11 +2,11 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <title>Navbar Transparan Glassmorphism</title>
+  <title>Navbar</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
     body {
-    background: url('../image/background.jpg') no-repeat center center fixed;
+    background: url('image/background.jpg') no-repeat center center fixed;
      background-size: cover;
      min-height: 100vh;
     }
@@ -73,7 +73,7 @@
 
   <nav class="navbar navbar-expand-lg">
     <div class="container">
-      <a class="navbar-brand" href="../admin">
+      <a class="navbar-brand" href="index.php">
         <i class="fas fa-gem me-2"></i> Wins Beads
       </a>
       <button
