@@ -73,6 +73,7 @@
                     <tr>
                         <th>No.</th>
                         <th>Nama</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -91,6 +92,10 @@
                                 <tr>
                                     <td><?php echo $number;?></td>
                                     <td><?php echo $data['nama'];?></td>
+                                    <td>
+                                        <a href="kategori-detail.php?<?php echo $data['id']?>"
+                                        class="btn btn-info"><i class="fas fa-search"></i></a>
+                                    </td>
                                 </tr>
                     <?php
                             $number++;
