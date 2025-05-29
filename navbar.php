@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <title>Navbar</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
   <style>
     body {
     background: url('image/background.jpg') no-repeat center center fixed;
@@ -91,28 +92,23 @@
       <div class="collapse navbar-collapse" id="navbarContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item me-3">
-            <a class="nav-link" href="../admin">Home</a>
-          </li>
-          <li class="nav-item me-3">
-            <a class="nav-link" href="kategori.php">Kategori</a>
+            <a class="nav-link" href="index.php">Home</a>
           </li>
           <li class="nav-item me-3">
             <a class="nav-link" href="produk.php">Produk</a>
           </li>
         </ul>
+                </ul>
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="logout.php">
-              <i class="fas fa-sign-out-alt me-1"></i> Logout
-            </a>
+            <a class="nav-link" href="admin/login.php">
+              <i class="fas fa-sign-in-alt me-1"></i> Login as Admin</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
-  
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
 </body>
 </html>

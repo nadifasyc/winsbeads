@@ -14,95 +14,91 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Dashboard - Wins Beads</title>
+    <title>Dashboard | Wins Beads</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../fontawesome/css/all.min.css" />
 
     <style>
-        /* Background gradient lembut */
         body {
             min-height: 100vh;
-            background: linear-gradient(135deg, #f0e6e6 0%, #c9a6a6 100%);
+            background: linear-gradient(135deg, #f8e1f4 0%, #c9a6c6 100%);
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        /* Container untuk home */
         .container {
             max-width: 960px;
         }
 
-        /* Glass card style */
         .card-summary {
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            border-radius: 15px;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            padding: 30px;
-            color: #4a2c2c;
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            padding: 35px;
+            color: #5b2d4d;
             cursor: pointer;
         }
+
         .card-summary:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
-            color: #733636;
+            transform: translateY(-10px);
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
         }
 
-        /* Icon style */
         .card-summary .icon {
-            font-size: 5rem;
-            color: #7e4c4c;
+            font-size: 4.5rem;
+            color: #9c5b86;
             margin-bottom: 20px;
-            transition: color 0.3s ease;
-        }
-        .card-summary:hover .icon {
-            color: #a55e5e;
+            transition: color 0.4s ease;
         }
 
-        /* Judul dan angka */
+        .card-summary:hover .icon {
+            color: #b56ca1;
+        }
+
         .card-summary h3 {
             font-weight: 700;
-            font-size: 2rem;
-            margin-bottom: 10px;
-            letter-spacing: 0.04em;
+            font-size: 1.9rem;
+            margin-bottom: 12px;
+            letter-spacing: 0.05em;
         }
+
         .card-summary p.number {
-            font-size: 3.2rem;
+            font-size: 3rem;
             font-weight: 900;
             margin-bottom: 20px;
-            color: #5d3b3b;
+            color: #7a3e66;
         }
 
-        /* Link detail */
         .link-detail {
             font-weight: 600;
-            color: #7e4c4c;
+            color: #9c5b86;
             text-decoration: none;
             border-bottom: 2px solid transparent;
-            transition: color 0.3s ease, border-color 0.3s ease;
+            transition: color 0.4s ease, border-color 0.4s ease;
         }
+
         .link-detail:hover {
-            color: #a55e5e;
-            border-color: #a55e5e;
+            color: #b56ca1;
+            border-color: #b56ca1;
             text-decoration: none;
         }
 
-        /* Responsive adjustments */
         @media (max-width: 575.98px) {
             .card-summary {
                 padding: 25px 15px;
             }
             .card-summary .icon {
-                font-size: 4rem;
+                font-size: 3.5rem;
             }
             .card-summary h3 {
-                font-size: 1.7rem;
+                font-size: 1.5rem;
             }
             .card-summary p.number {
-                font-size: 2.5rem;
+                font-size: 2.4rem;
             }
         }
     </style>
@@ -136,7 +132,6 @@
         </div>
     </div>
 
-    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../fontawesome/js/all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

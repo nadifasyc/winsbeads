@@ -41,6 +41,7 @@ if (isset($_POST['loginbtn'])) {
     <title>Login - Wins Beads</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
     <style>
         body {
             background: url('../image/background.jpg') no-repeat center center fixed;
@@ -154,10 +155,13 @@ if (isset($_POST['loginbtn'])) {
             />
         </div>
         <button type="submit" name="loginbtn" class="custom-login-btn">Login</button>
+        <a href="../index.php" class="btn custom-login-btn mt-3" style="background-color: rgba(255, 255, 255, 0.2); color: #fff;">Guest</a>
     </form>
 
     <?php if ($error): ?>
-        <div class="error-msg" role="alert" aria-live="assertive"><?php echo $error; ?></div>
+        <div class="error-msg" role="alert" aria-live="assertive">
+            <?php echo $error; ?>
+        </div>
     <?php endif; ?>
 </div>
 
