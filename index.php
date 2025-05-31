@@ -214,9 +214,9 @@ $queryProduk = mysqli_query($con, "SELECT id, nama, harga, foto, detail FROM pro
         </div>
       </div>
       <div class="col-md-4">
-        <div class="highlighted-kategori" style="background-image: url('image/macramecharm.jpg');">
-          <a href="produk.php?kategori=Macrame Charm" class="stretched-link"></a>
-          <h5>Macrame Charm</h5>
+        <div class="highlighted-kategori" style="background-image: url('image/bagcharm.jpg');">
+          <a href="produk.php?kategori=Bag Charm" class="stretched-link"></a>
+          <h5>Bag Charm</h5>
         </div>
       </div>
       <div class="col-md-4">
