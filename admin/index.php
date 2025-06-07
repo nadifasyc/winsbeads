@@ -7,6 +7,9 @@
 
     $queryProduk = mysqli_query($con, "SELECT * FROM produk");
     $jumlahProduk = mysqli_num_rows($queryProduk);
+
+    $queryPesanan = mysqli_query($con, "SELECT * FROM pesanan");
+    $jumlahPesanan = mysqli_num_rows($queryPesanan);
 ?>
 
 <!DOCTYPE html>
@@ -14,10 +17,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Dashboard | Wins Beads</title>
+    <title>Home | Winsbeads</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-
 
     <style>
         body {
@@ -41,6 +43,7 @@
             padding: 35px;
             color: #5b2d4d;
             cursor: pointer;
+            text-align: center;
         }
 
         .card-summary:hover {
@@ -91,12 +94,15 @@
             .card-summary {
                 padding: 25px 15px;
             }
+
             .card-summary .icon {
                 font-size: 3.5rem;
             }
+
             .card-summary h3 {
                 font-size: 1.5rem;
             }
+
             .card-summary p.number {
                 font-size: 2.4rem;
             }
@@ -106,27 +112,32 @@
 <body>
     <?php require "navbar.php" ?>
 
-    <div class="container mt-5 text-center">
-        <div class="row justify-content-center g-4">
-            <div class="col-lg-5 col-md-6 col-sm-8 mx-auto">
+    <div class="container mt-5">
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-4">
                 <div class="card-summary">
-                    <div class="icon">
-                        <i class="fas fa-th-large"></i>
-                    </div>
+                    <div class="icon"><i class="fas fa-th-large"></i></div>
                     <h3>Kategori</h3>
                     <p class="number"><?php echo $jumlahKategori; ?></p>
                     <a href="kategori.php" class="link-detail">Lihat Detail &rarr;</a>
                 </div>
             </div>
 
-            <div class="col-lg-5 col-md-6 col-sm-8 mx-auto">
+            <div class="col-md-4">
                 <div class="card-summary">
-                    <div class="icon">
-                        <i class="fas fa-box"></i>
-                    </div>
+                    <div class="icon"><i class="fas fa-box"></i></div>
                     <h3>Produk</h3>
                     <p class="number"><?php echo $jumlahProduk; ?></p>
                     <a href="produk.php" class="link-detail">Lihat Detail &rarr;</a>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card-summary">
+                    <div class="icon"><i class="fas fa-shopping-cart"></i></div>
+                    <h3>Pesanan</h3>
+                    <p class="number"><?php echo $jumlahPesanan; ?></p>
+                    <a href="pesanan.php" class="link-detail">Lihat Detail &rarr;</a>
                 </div>
             </div>
         </div>

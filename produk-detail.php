@@ -13,7 +13,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Winsbeads | Detail Produk</title>
+    <title>Detail Produk - Winsbeads</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <style>
@@ -107,6 +107,16 @@
             background-color: rgba(255, 255, 255, 0.4);
             border-radius: 4px;
         }
+         .btn.btn-custom { 
+        background-color: rgba(128, 93, 116, 0.75); 
+        color: #fff; 
+        transition: background-color 0.3s; 
+        }
+
+        .btn.btn-custom:hover { 
+            background-color: #a97474; 
+        }
+</style>
     </style>
 </head>
 <body>
@@ -122,6 +132,12 @@
                 <p><?php echo $produk['detail']; ?></p>
                 <p class="text-harga">Rp <?php echo number_format($produk['harga'], 0, ',', '.'); ?></p>
                 <p>Status: <strong><?php echo $produk['ketersediaan_stok'];?></strong></p>
+                <form method="post" action="keranjang-update.php">
+                <input type="hidden" name="produk_id" value="<?php echo $produk['id']; ?>">
+                <button type="submit" class="btn btn-custom">
+                    <i class="fas fa-cart-plus me-1"></i>Tambah ke Keranjang</button>
+                </form>
+
             </div>
         </div>
     </div>

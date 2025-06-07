@@ -1,5 +1,5 @@
 <?php
-require "koneksi.php";
+require "init.php";
 $queryProduk = mysqli_query($con, "SELECT id, nama, harga, foto, detail FROM produk LIMIT 6");
 ?>
 
@@ -8,7 +8,7 @@ $queryProduk = mysqli_query($con, "SELECT id, nama, harga, foto, detail FROM pro
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Wins Beads | Home</title>
+  <title>Home | Winsbeads</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
   
@@ -187,7 +187,6 @@ $queryProduk = mysqli_query($con, "SELECT id, nama, harga, foto, detail FROM pro
 
   <?php require "navbar.php"; ?>
 
-  <!-- Banner -->
   <div class="container-fluid banner d-flex align-items-center justify-content-center">
     <div class="container text-center">
       <h1>Wins Beads</h1>
@@ -203,7 +202,6 @@ $queryProduk = mysqli_query($con, "SELECT id, nama, harga, foto, detail FROM pro
     </div>
   </div>
 
-  <!-- Kategori Favorit -->
   <div class="container text-center my-5">
     <h2 class="section-title">Kategori Favorit</h2>
     <div class="row g-4">
@@ -220,15 +218,14 @@ $queryProduk = mysqli_query($con, "SELECT id, nama, harga, foto, detail FROM pro
         </div>
       </div>
       <div class="col-md-4">
-        <div class="highlighted-kategori" style="background-image: url('image/keychainphotocard.jpg');">
-          <a href="produk.php?kategori=Keychain Photocard" class="stretched-link"></a>
-          <h5>Keychain Photocard</h5>
+        <div class="highlighted-kategori" style="background-image: url('image/phonestrap.jpg');">
+          <a href="produk.php?kategori=Phone Strap" class="stretched-link"></a>
+          <h5>Phone Strap</h5>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- About Us -->
   <div class="container my-5">
     <div class="glass-card p-5 shadow-lg text-center">
       <div class="mb-4">
@@ -244,7 +241,6 @@ $queryProduk = mysqli_query($con, "SELECT id, nama, harga, foto, detail FROM pro
     </div>
   </div>
 
-  <!-- Produk Terbaru -->
   <div class="container text-center my-5" id="produk">
     <h2 class="section-title">Produk Terbaru</h2>
     <div class="row g-4">
