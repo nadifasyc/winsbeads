@@ -1,7 +1,6 @@
 <?php
 require "init.php";
 
-// Kosongkan keranjang setelah checkout
 unset($_SESSION['keranjang']);
 ?>
 
@@ -21,14 +20,14 @@ unset($_SESSION['keranjang']);
             padding: 0;
         }
 
-        .thank-you-container {
+        .trims-container {
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
-        .thank-you-box {
+        .trims-box {
             background: rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(10px);
             border-radius: 20px;
@@ -40,7 +39,7 @@ unset($_SESSION['keranjang']);
             width: 100%;
         }
 
-        .thank-you-box h1 {
+        .trims-box h1 {
             font-family: 'Fredoka', sans-serif;
             color: #9e5e89;
             font-size: 2.5rem;
@@ -48,7 +47,7 @@ unset($_SESSION['keranjang']);
             margin-bottom: 20px;
         }
 
-        .thank-you-box p {
+        .trims-box p {
             font-size: 1.1rem;
             color: #3c2a35;
         }
@@ -73,11 +72,11 @@ unset($_SESSION['keranjang']);
 
     <?php require "navbar.php"; ?>
 
-    <div class="container thank-you-container">
-        <div class="thank-you-box">
+    <div class="container trims-container">
+        <div class="trims-box">
             <h1><i class="fas fa-heart me-2"></i>Terima Kasih!</h1>
             <p>Pesananmu telah berhasil diproses.</p>
-            <p>Kami akan segera menghubungi kamu untuk konfirmasi dan pengiriman.</p>
+            <p>Kami akan segera menghubungi untuk konfirmasi dan pengiriman.</p>
             <a href="index.php" class="btn custom-btn"><i class="fas fa-home me-1"></i>Kembali ke Beranda</a>
         </div>
     </div>

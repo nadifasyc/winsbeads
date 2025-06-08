@@ -107,9 +107,6 @@ $totalItem = isset($_SESSION['keranjang']) ? hitung_total_item($_SESSION['keranj
         <li class="nav-item me-3">
           <a class="nav-link" href="produk.php">Produk</a>
         </li>
-      </ul>
-
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item me-3">
           <a class="nav-link position-relative" href="keranjang.php">
             <i class="fas fa-shopping-cart"></i>
@@ -118,6 +115,10 @@ $totalItem = isset($_SESSION['keranjang']) ? hitung_total_item($_SESSION['keranj
               </span>
           </a>
         </li>
+      </ul>
+
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
         <li class="nav-item">
           <a class="nav-link" href="admin/login.php">
             <i class="fas fa-sign-in-alt me-1"></i> Login as Admin

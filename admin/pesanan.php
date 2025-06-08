@@ -1,7 +1,6 @@
 <?php
 require "../init.php";
 
-// Proses ubah status jika form dikirim
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['ubah_status'])) {
     $id = intval($_POST['pesanan_id']);
     $status = mysqli_real_escape_string($con, $_POST['status']);
@@ -10,7 +9,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['ubah_status'])) {
     exit;
 }
 
-// Ambil semua data pesanan
 $query = mysqli_query($con, "
     SELECT 
         pesanan.id AS pesanan_id,
@@ -126,6 +124,16 @@ while ($row = mysqli_fetch_assoc($query)) {
         .table td, .table th {
             vertical-align: middle !important;
         }
+        
+        footer {
+            background-color: rgba(158, 94, 137, 0.65);
+            color: #fff;
+            padding: 15px 0;
+            text-align: center;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+            margin-top: 40px;
+        }
     </style>
 </head>
 <body>
@@ -200,8 +208,8 @@ while ($row = mysqli_fetch_assoc($query)) {
         </div>
     </div>
 
-    <footer class="text-center mt-5" style="background: rgba(158,94,137,0.65); color:white; padding:10px; border-radius:12px;">
-        &copy; 2025 Wins Beads - All Rights Reserved
+    <footer>
+         &copy; 2025 Wins Beads - All Rights Reserved
     </footer>
 </div>
 

@@ -18,7 +18,10 @@ if (isset($_POST['loginbtn'])) {
 
         if ($result->num_rows === 1) {
             $data = $result->fetch_assoc();
-            if (password_verify($password, $data['password'])) {
+            $dbPassword = $data['password'];
+
+            // cek password hash/bukan
+            if (password_verify($password, $dbPassword) || hash_equals($dbPassword, $password)) {
                 $_SESSION['username'] = $data['username'];
                 $_SESSION['login'] = true;
                 header('Location: ../admin');
@@ -33,7 +36,6 @@ if (isset($_POST['loginbtn'])) {
     }
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="id">
 <head>

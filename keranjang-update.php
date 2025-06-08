@@ -2,19 +2,18 @@
 session_start();
 require_once "koneksi.php";
 
-// Inisialisasi keranjang jika belum ada
+// inisialisasi awal
 if (!isset($_SESSION['keranjang'])) {
     $_SESSION['keranjang'] = [];
 }
 
 $produk_id = $_GET['id'] ?? $_POST['produk_id'] ?? null;
-$aksi = $_GET['aksi'] ?? 'tambah'; // default 'tambah' jika lewat POST
+$aksi = $_GET['aksi'] ?? 'tambah';
 
-// Validasi ID produk
 if ($produk_id) {
     $produk_id = intval($produk_id);
 
-    // Jika produk belum ada di keranjang, ambil datanya dari DB
+    // jika belum ada di keranjang, ambil datanya dari DB
     if (!isset($_SESSION['keranjang'][$produk_id])) {
         $stmt = mysqli_prepare($con, "SELECT id, nama, harga FROM produk WHERE id = ?");
         mysqli_stmt_bind_param($stmt, 'i', $produk_id);
@@ -29,13 +28,11 @@ if ($produk_id) {
                 'jumlah' => 0
             ];
         } else {
-            // Produk tidak ditemukan di DB
             header("Location: produk.php");
             exit;
         }
     }
 
-    // Eksekusi aksi
     switch ($aksi) {
         case 'tambah':
             $_SESSION['keranjang'][$produk_id]['jumlah'] += 1;
@@ -54,7 +51,6 @@ if ($produk_id) {
     }
 }
 
-// Redirect kembali
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     header("Location: keranjang.php");
 } else {
