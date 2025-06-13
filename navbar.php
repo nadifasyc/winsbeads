@@ -117,14 +117,21 @@ $totalItem = isset($_SESSION['keranjang']) ? hitung_total_item($_SESSION['keranj
         </li>
       </ul>
 
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-
-        <li class="nav-item">
-          <a class="nav-link" href="admin/login.php">
-            <i class="fas fa-sign-in-alt me-1"></i> Login as Admin
-          </a>
-        </li>
-      </ul>
+<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+  <?php if (isset($_SESSION['user'])): ?>
+    <li class="nav-item">
+      <a class="nav-link" href="logout.php">
+        <i class="fas fa-sign-out-alt me-1"></i> Logout
+      </a>
+    </li>
+  <?php else: ?>
+    <li class="nav-item">
+      <a class="nav-link" href="login.php">
+        <i class="fas fa-sign-in-alt me-1"></i> Login
+      </a>
+    </li>
+  <?php endif; ?>
+</ul>
     </div>
   </div>
 </nav>

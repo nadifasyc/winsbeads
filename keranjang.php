@@ -1,6 +1,11 @@
 <?php
 require_once "init.php";
 
+if (!isset($_SESSION['user'])) {
+    header("Location: user/login.php?pesan=login-dulu");
+    exit;
+}
+
 if (!isset($_SESSION['keranjang'])) {
     $_SESSION['keranjang'] = [];
 }

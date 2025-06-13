@@ -11,7 +11,7 @@ if (isset($_POST['loginbtn'])) {
     if ($username === '' || $password === '') {
         $error = "Username dan Password wajib diisi.";
     } else {
-        $stmt = $con->prepare("SELECT * FROM user WHERE username = ?");
+        $stmt = $con->prepare("SELECT * FROM admin WHERE username = ?");
         $stmt->bind_param("s", $username);
         $stmt->execute();
         $result = $stmt->get_result();
@@ -157,8 +157,15 @@ if (isset($_POST['loginbtn'])) {
             />
         </div>
         <button type="submit" name="loginbtn" class="custom-login-btn">Login</button>
-        <a href="../index.php" class="btn custom-login-btn mt-3" style="background-color: rgba(255, 255, 255, 0.2); color: #fff;">Guest</a>
     </form>
+
+    <div class="text-center mt-3">
+    <small>
+        <a href="../login.php" style="color: #fff; text-decoration: underline;">
+            Login as user
+        </a>
+    </small>
+    </div>
 
     <?php if ($error): ?>
         <div class="error-msg" role="alert" aria-live="assertive">

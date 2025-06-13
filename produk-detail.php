@@ -134,8 +134,19 @@
                 <p>Status: <strong><?php echo $produk['ketersediaan_stok'];?></strong></p>
                 <form method="post" action="keranjang-update.php">
                 <input type="hidden" name="produk_id" value="<?php echo $produk['id']; ?>">
-                <button type="submit" class="btn btn-custom">
-                    <i class="fas fa-cart-plus me-1"></i>Tambah ke Keranjang</button>
+                <?php if (isset($_SESSION['user'])): ?>
+                    <form action="keranjang.php" method="post">
+                        <input type="hidden" name="aksi" value="tambah">
+                        <input type="hidden" name="id" value="<?= $produk['id'] ?>">
+                        <button type="submit" class="btn btn-custom">
+                            <i class="fas fa-cart-plus me-1"></i>Tambah ke Keranjang
+                        </button>
+                    </form>
+                <?php else: ?>
+                    <a href="login.php" class="btn btn-custom">
+                        <i class="fas fa-cart-plus me-1"></i>Login untuk membeli
+                    </a>
+                <?php endif; ?>
                 </form>
 
             </div>
